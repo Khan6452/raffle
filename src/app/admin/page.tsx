@@ -13,7 +13,6 @@ export default function AdminPage() {
   const [error, setError] = useState("");
   const [result, setResult] = useState<any>(null);
 
-  // ✅ 로그인 처리
   async function handleLogin() {
     setError("");
 
@@ -37,7 +36,6 @@ export default function AdminPage() {
     }
   }
 
-  // ✅ 추첨 처리
   async function handleDraw() {
     setError("");
     setResult(null);
@@ -67,7 +65,6 @@ export default function AdminPage() {
     }
   }
 
-  // 🔒 로그인 화면
   if (!isLoggedIn) {
     return (
       <main className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
@@ -97,7 +94,6 @@ export default function AdminPage() {
     );
   }
 
-  // 🎯 관리자 추첨 화면
   return (
     <main className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-2xl mx-auto bg-white p-6 rounded-2xl shadow">
